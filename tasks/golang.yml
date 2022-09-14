@@ -1,0 +1,23 @@
+- name: Uninstall Golang
+  become: true
+  apt:
+    name: golang-go 
+    state: absent
+  tags:
+    - golang
+    - install
+- name: Add Golang Repository 
+  become: true
+  ansible.builtin.apt_repository: 
+    repo: ppa:longsleep/golang-backports
+  tags:
+    - golang
+    - install
+- name: Install Golang
+  become: true
+  apt:
+    name: golang-go 
+  tags:
+    - golang
+    - install
+

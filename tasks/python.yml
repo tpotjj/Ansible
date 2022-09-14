@@ -1,0 +1,15 @@
+- name: Add Python Repository 
+  become: true
+  ansible.builtin.apt_repository: 
+    repo: ppa:deadsnakes/ppa
+  tags:
+    - python
+    - install
+- name: Install Python
+  become: true
+  apt:
+    name: python3.10
+  tags:
+    - python
+    - install
+

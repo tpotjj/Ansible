@@ -1,0 +1,8 @@
+- name: Install Sys Packages (essentials; cmake, curl, gettext, python3-pip)
+  become: true
+  apt:
+    name: ["cmake", "curl", "gettext", "python3-pip"]
+  tags:
+    - install
+    - neovim
+    - core

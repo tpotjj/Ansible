@@ -1,0 +1,27 @@
+- name: Ensure .ssh directory exists.
+  file:
+    dest: "{{ dest_ssh_folder }}"
+    mode: 0700
+    state: directory
+  tags:
+    - install
+    - ssh
+    - personal-projects
+- name: Install tpotjj ssh key
+  copy:
+    src: "{{ ssh_folder }}/id_rsa_tpotjj"
+    dest: "{{ dest_ssh_folder }}/id_rsa_tpotjj"
+    mode: 0600
+  tags:
+    - install
+    - ssh
+    - personal-projects
+- name: Install tpotjj ssh key public
+  copy:
+    src: "{{ ssh_folder }}/id_rsa_tpotjj.pub"
+    dest: "{{ dest_ssh_folder }}/id_rsa_tpotjj.pub"
+    mode: 0644
+  tags:
+    - install
+    - ssh
+    - personal-projects

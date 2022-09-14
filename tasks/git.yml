@@ -1,0 +1,10 @@
+- name: Install config file for github
+  copy:
+    src: "{{ ssh_folder }}/config"
+    dest: "{{ dest_ssh_folder }}/config"
+    mode: 0600
+  tags:
+    - install
+    - ssh
+    - git-config
+    - personal-projects

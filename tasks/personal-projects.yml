@@ -1,0 +1,45 @@
+- name: simplebank exists
+  stat:
+    path: "{{ personal }}/simplebank"
+  register: simplebank
+  tags:
+    - install
+    - personal-projects
+- name: Install simplebank project
+  ansible.builtin.git:
+    repo: 'git@tpotjj:tpotjj/simplebank.git'
+    dest: "{{ personal }}/simplebank"
+    accept_hostkey: yes
+  tags:
+    - install
+    - personal-projects
+- name: .dotfiles  exists
+  stat:
+    path: "{{ personal }}/.dotfiles"
+  register: dotfiles
+  tags:
+    - install
+    - personal-projects
+- name: Install .dotfiles project
+  ansible.builtin.git:
+    repo: 'git@tpotjj:tpotjj/.dotfiles.git'
+    dest: "{{ personal }}/.dotfiles"
+    accept_hostkey: yes
+  tags:
+    - install
+    - personal-projects
+- name: Ansible exists
+  stat:
+    path: "{{ personal }}/Ansible"
+  register: Ansible 
+  tags:
+    - install
+    - personal-projects
+- name: Install Ansible project
+  ansible.builtin.git:
+    repo: 'git@tpotjj:tpotjj/Ansible.git'
+    dest: "{{ personal }}/Ansible"
+    accept_hostkey: yes
+  tags:
+    - install
+    - personal-projects
