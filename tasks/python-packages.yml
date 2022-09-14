@@ -1,0 +1,12 @@
+- name: Install Virtualenvwrapper 
+  ansible.builtin.pip:
+    name: virtualenvwrapper
+  tags:
+    - install
+    - python-packages
+- name: Install pre-commit
+  ansible.builtin.pip:
+    name: pre-commit
+  tags:
+    - install
+    - python-packages
