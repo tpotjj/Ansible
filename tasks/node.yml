@@ -1,8 +1,3 @@
-- name: Update our zshrc
-  shell: sed  -i 's/(git/(git zsh-autosuggestions/' ~/.zshrc
-  tags:
-    - install
-    - node
 - name: Install Node
   apt:
     name: ['nodejs', 'npm']
