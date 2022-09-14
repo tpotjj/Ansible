@@ -1,4 +1,5 @@
 - name: Install Node
+  become: true
   apt:
     name: ['nodejs', 'npm']
   tags:
