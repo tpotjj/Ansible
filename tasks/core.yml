@@ -1,8 +1,14 @@
-- name: Install Sys Packages (essentials; cmake, curl, gettext, python3-pip)
+- name: Install Sys Packages 1.0 (curl, fzf, gettext, ripgrep)
   become: true
   apt:
-    name: ["cmake", "curl", "gettext", "python3-pip"]
+    name: ["curl", "fzf", "gettext", "ripgrep"]
   tags:
     - install
-    - neovim
+    - core
+- name: Install Sys Programs 1.0 (i3, tmux)
+  become: true
+  apt:
+    name: ["i3", "tmux"]
+  tags:
+    - install
     - core
