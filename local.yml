@@ -27,3 +27,4 @@
     - include: tasks/personal-projects.yml
     - include: tasks/nvim.yml
     - include: tasks/zsh.yml
+    - include: tasks/brave.yml
