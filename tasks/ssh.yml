@@ -50,3 +50,24 @@
     - ssh
     - personal-projects
     - dotfiles
+# ssh keys for joris-jansen --> Bitbucket
+- name: Install joris-jansen ssh key
+  copy:
+    src: "{{ ssh_folder }}/id_rsa_joris-jansen"
+    dest: "{{ dest_ssh_folder }}/id_rsa_joris-jansen"
+    mode: 0600
+  tags:
+    - install
+    - ssh
+    - personal-projects
+    - dotfiles
+- name: Install joris-jansen ssh key public
+  copy:
+    src: "{{ ssh_folder }}/id_rsa_joris-jansen"
+    dest: "{{ dest_ssh_folder }}/id_rsa_joris-jansen.pub"
+    mode: 0644
+  tags:
+    - install
+    - ssh
+    - personal-projects
+    - dotfiles
