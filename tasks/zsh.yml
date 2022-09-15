@@ -11,13 +11,11 @@
     - install
     - zsh
 - name: Install Oh my zsh
-  become: true
   shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
   tags:
     - install
     - zsh
 - name: Install zsh autosuggestions
-  become: true
   ansible.builtin.git:
     repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
     dest: "~/.oh-my-zsh/plugins/zsh-autosuggestions" 
