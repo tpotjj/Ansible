@@ -1,4 +1,5 @@
 - name: Install Yarn
+  become: true
   npm:
     name: yarn
     global: yes
@@ -6,6 +7,7 @@
     - install
     - node
 - name: Install eslint
+  become: true
   npm:
     name: eslint
     global: yes
@@ -13,6 +15,7 @@
     - install
     - node
 - name: Install Typescript server
+  become: true
   npm:
     name: typescript-language-server
     global: yes
@@ -20,6 +23,7 @@
     - install
     - node
 - name: Install Typescript
+  become: true
   npm:
     name: typescript
     global: yes
@@ -27,6 +31,7 @@
     - install
     - node
 - name: Install TS-Node
+  become: true
   npm:
     name: ts-node
     global: yes
@@ -34,6 +39,7 @@
     - install
     - node
 - name: Install Treesitter
+  become: true
   npm:
     name: tree-sitter-cli
     global: yes
