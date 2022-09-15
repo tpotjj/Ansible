@@ -27,4 +27,5 @@
     - include: tasks/python-packages.yml
     - include: tasks/personal-projects.yml
     - include: tasks/nvim.yml
+    - include: tasks/postgres.yml
     - include: tasks/brave.yml

@@ -1,0 +1,31 @@
+# Postgres
+- name: Uninstall Postgres
+  become: true
+  apt:
+    name: ["postgresql", "postgresql-contrib"]
+    state: absent
+  tags:
+    - postgres
+- name: Install Postgres
+  become: true
+  apt:
+    name: ["postgresql", "postgresql-contrib"]
+  tags:
+    - postgres
+# PgAdmin
+- name: Install Public key for Repo
+  shell: sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
+  tags:
+    - install
+    - pgadmin
+- name: Create repo config file
+  shell: sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+  tags:
+    - install
+    - pgadmin
+- name: Install PgAdmin
+  apt:
+    name: pgadmin4-desktop
+  tags:
+    - install
+    - pgadmin
