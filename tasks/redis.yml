@@ -13,4 +13,4 @@
   apt:
     name: redis
   tags:
-    - pgadmin
+    - redis

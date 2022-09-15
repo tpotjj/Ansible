@@ -5,6 +5,7 @@
   tags:
     - install
     - core
+    - redis
 - name: Install Sys Programs 1.0 (arandr, guvcview, i3, pavucontrol, tmux)
   become: true
   apt:
