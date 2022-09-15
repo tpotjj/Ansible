@@ -1,13 +1,3 @@
-- name: Install Git
-  become: true
-  apt:
-    name: git 
-  tags:
-    - install
-    - ssh
-    - git-config
-    - personal-projects
-    - dotfiles
 - name: Install config file for github
   copy:
     src: "{{ ssh_folder }}/config"
