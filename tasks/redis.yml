@@ -1,0 +1,16 @@
+- name: Add repo to apt index Redis
+  become: true
+  shell: sudo curl -fsSL https://packages.redis.io/gpg
+  tags:
+    - redis
+- name: Encrypt and sign index Redis
+  become: true
+  shell: sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+  tags:
+    - redis
+- name: Install Redis
+  become: true
+  apt:
+    name: redis
+  tags:
+    - pgadmin
