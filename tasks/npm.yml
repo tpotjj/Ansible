@@ -39,9 +39,17 @@
     - install
     - node
 - name: Install Treesitter
+  become: true
   npm:
     name: tree-sitter-cli
     global: yes
   tags:
     - install
     - node
+# - name: Install Treesitter
+#   npm:
+#     name: tree-sitter-cli
+#     global: yes
+#   tags:
+#     - install
+#     - node
