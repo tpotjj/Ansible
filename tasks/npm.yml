@@ -39,7 +39,6 @@
     - install
     - node
 - name: Install Treesitter
-  become: true
   npm:
     name: tree-sitter-cli
     global: yes
