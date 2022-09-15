@@ -8,6 +8,7 @@
     - ssh
     - personal-projects
     - dotfiles
+# ssh keys for tpotjj --> Github
 - name: Install tpotjj ssh key
   copy:
     src: "{{ ssh_folder }}/id_rsa_tpotjj"
@@ -22,6 +23,27 @@
   copy:
     src: "{{ ssh_folder }}/id_rsa_tpotjj.pub"
     dest: "{{ dest_ssh_folder }}/id_rsa_tpotjj.pub"
+    mode: 0644
+  tags:
+    - install
+    - ssh
+    - personal-projects
+    - dotfiles
+# ssh keys for Joris2Jansen --> Github
+- name: Install Joris2Jansen ssh key
+  copy:
+    src: "{{ ssh_folder }}/id_rsa_Joris2Jansen"
+    dest: "{{ dest_ssh_folder }}/id_rsa_Joris2Jansen"
+    mode: 0600
+  tags:
+    - install
+    - ssh
+    - personal-projects
+    - dotfiles
+- name: Install Joris2Jansen ssh key public
+  copy:
+    src: "{{ ssh_folder }}/id_rsa_Joris2Jansen.pub"
+    dest: "{{ dest_ssh_folder }}/id_rsa_Joris2Jansen.pub"
     mode: 0644
   tags:
     - install
