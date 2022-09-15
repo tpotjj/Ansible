@@ -1,0 +1,37 @@
+# Postman
+- name: Install Postman
+  snap:
+    name: postman
+  tags:
+    - programs
+    - postman
+# Discord
+- name: Install Discord
+  snap:
+    name: discord
+  tags:
+    - programs
+    - discord
+# OBS
+- name: Uninstall OBS
+  become: true
+  apt:
+    name: obs-studio 
+    state: absent
+  tags:
+    - programs
+    - obs
+- name: Add OBS Repository 
+  become: true
+  ansible.builtin.apt_repository: 
+    repo: ppa:obsproject/obs-studio 
+  tags:
+    - programs
+    - obs
+- name: Install OBS
+  become: true
+  apt:
+    name: obs-studio 
+  tags:
+    - programs
+    - obs

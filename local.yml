@@ -28,4 +28,6 @@
     - include: tasks/personal-projects.yml
     - include: tasks/nvim.yml
     - include: tasks/postgres.yml
+    - include: tasks/redis.yml
+    - include: tasks/programs.yml
     - include: tasks/brave.yml

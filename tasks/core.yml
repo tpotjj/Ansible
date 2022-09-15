@@ -1,14 +1,14 @@
-- name: Install Sys Packages 1.0 (curl, fzf, gettext, python3-pip, ripgrep)
+- name: Install Sys Packages 1.0 (curl, fzf, gettext, lsb-release, python3-pip, ripgrep)
   become: true
   apt:
-    name: ["curl", "fzf", "gettext", "python3-pip", "ripgrep"]
+    name: ["curl", "fzf", "gettext", "lsb-release", "python3-pip", "ripgrep"]
   tags:
     - install
     - core
-- name: Install Sys Programs 1.0 (i3, tmux)
+- name: Install Sys Programs 1.0 (arandr, guvcview, i3, pavucontrol, tmux)
   become: true
   apt:
-    name: ["i3", "tmux"]
+    name: ["arandr", "guvcview", "i3", "pavucontrol", "tmux"]
   tags:
     - install
     - core
