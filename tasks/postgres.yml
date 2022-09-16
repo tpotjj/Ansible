@@ -14,14 +14,17 @@
     - postgres
 # PgAdmin
 - name: Install Public key for Repo
+  become: true
   shell: sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
   tags:
     - pgadmin
 - name: Create repo config file
+  become: true
   shell: sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
   tags:
     - pgadmin
 - name: Install PgAdmin
+  become: true
   apt:
     name: pgadmin4-desktop
   tags:
