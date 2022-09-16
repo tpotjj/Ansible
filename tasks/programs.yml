@@ -4,6 +4,7 @@
   snap:
     name: postman
   tags:
+    - install
     - programs
     - postman
 # Discord
@@ -12,6 +13,7 @@
   snap:
     name: discord
   tags:
+    - install
     - programs
     - discord
 # OBS
@@ -21,6 +23,7 @@
     name: obs-studio 
     state: absent
   tags:
+    - install
     - programs
     - obs
 - name: Add OBS Repository 
@@ -28,6 +31,7 @@
   ansible.builtin.apt_repository: 
     repo: ppa:obsproject/obs-studio 
   tags:
+    - install
     - programs
     - obs
 - name: Install OBS
@@ -35,5 +39,6 @@
   apt:
     name: obs-studio 
   tags:
+    - install
     - programs
     - obs
