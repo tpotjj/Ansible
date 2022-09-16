@@ -1,5 +1,6 @@
 # Postman
 - name: Install Postman
+  become: true
   snap:
     name: postman
   tags:
@@ -7,6 +8,7 @@
     - postman
 # Discord
 - name: Install Discord
+  become: true
   snap:
     name: discord
   tags:
