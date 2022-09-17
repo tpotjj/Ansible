@@ -1,7 +1,7 @@
-- name: Install Sys Packages 1.0 (curl, feh, fzf, gettext, lsb-release, python3-pip, ripgrep)
+- name: Install Sys Packages 1.0 (apt-transport-https, curl, feh, fzf, gettext, lsb-release, python3-pip, ripgrep)
   become: true
   apt:
-    name: ["curl", "feh", "fzf", "gettext", "lsb-release", "python3-pip", "ripgrep"]
+    name: ["apt-transport-https", "curl", "feh", "fzf", "gettext", "lsb-release", "python3-pip", "ripgrep"]
   tags:
     - install
     - core

@@ -1,0 +1,21 @@
+# Dart
+- name: Install Public key for Repo
+  become: true
+  shell: wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/dart.gpg
+  tags:
+    - install
+    - dart
+- name: Install Dart
+  become: true
+  apt:
+    name: dart 
+  tags:
+    - install
+# Flutter
+- name: Install Postman
+  become: true
+  snap:
+    name: flutter
+  tags:
+    - install
+    - flutter
