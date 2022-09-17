@@ -1,6 +1,6 @@
 - name: Install Virtualenvwrapper 
   ansible.builtin.pip:
-    name: virtualenvwrapper
+    name: ["virtualenvwrapper", "virtualenv"]
   tags:
     - install
     - python-packages
