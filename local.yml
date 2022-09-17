@@ -4,6 +4,7 @@
     dest_ssh_folder: "{{ lookup('env', 'HOME') }}/.ssh"
     code: "{{ lookup('env', 'HOME') }}/code"
     personal: "{{ code }}/personal"
+    setup: "{{ lookup('env', 'HOME') }}/Personal"
     work: "{{ code }}/work"
   pre_tasks:
     - name: Update cache

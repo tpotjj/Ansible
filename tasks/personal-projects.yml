@@ -46,3 +46,19 @@
   tags:
     - install
     - personal-projects
+# Backgrouding
+- name: Backgrounding exists
+  stat:
+    path: "{{ setup }}/Backgrouding"
+  register: Backgrouding 
+  tags:
+    - install
+    - personal-projects
+- name: Install Backgrounding project
+  ansible.builtin.git:
+    repo: 'git@tpotjj:tpotjj/Backgrounding.git'
+    dest: "{{ setup }}/Backgrounding"
+    accept_hostkey: yes
+  tags:
+    - install
+    - personal-projects
