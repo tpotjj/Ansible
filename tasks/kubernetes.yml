@@ -1,7 +1,7 @@
-- name: Install Kubernetes
+- name: Install Kubectl
   become: true
   snap:
-    name: kubectl --classic
-  tags:
-    - kubernetes
-    - install
+    name: kubectl
+    # channel: "1.13/stable"
+    classic: yes
+    state: present
