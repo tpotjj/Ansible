@@ -1,7 +1,7 @@
 - name: Install Kubernetes
   become: true
   snap:
-    name: kubectl
+    name: kubectl --classic
   tags:
     - kubernetes
     - install
