@@ -4,14 +4,17 @@
   shell: sudo curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
   tags:
     - redis
+    - install
 - name: Sign Redis keys
   become: true
   shell: echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
   tags:
     - redis
+    - install
 - name: Install Redis
   become: true
   apt:
     name: redis
   tags:
     - redis
+    - install
