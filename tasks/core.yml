@@ -1,15 +1,23 @@
-- name: Install Sys Packages 1.0 (apt-transport-https, curl, feh, fzf, gettext, lsb-release, python3-pip, ripgrep)
+- name: Install Sys Packages 1.0 (apt-transport-https, ca-certificates, curl, feh, fzf, gettext, lsb-release, python3-pip, ripgrep)
   become: true
   apt:
-    name: ["apt-transport-https", "curl", "feh", "fzf", "gettext", "lsb-release", "python3-pip", "ripgrep"]
+    name: ["apt-transport-https", "ca-certificates", "curl", "fzf", "gettext", "lsb-release", "python3-pip", "ripgrep"]
   tags:
     - install
     - core
     - redis
-- name: Install Sys Programs 1.0 (arandr, guvcview, i3, pavucontrol, tmux)
+- name: Install Sys Packages 2.0 (gnupg2, software-properties-common)
   become: true
   apt:
-    name: ["arandr", "guvcview", "i3", "pavucontrol", "tmux"]
+    name: ["gnupg2", "software-properties-common"]
+  tags:
+    - install
+    - core
+    - redis
+- name: Install Sys Programs 1.0 (arandr, feh, guvcview, i3, pavucontrol, tmux)
+  become: true
+  apt:
+    name: ["arandr", "feh", "guvcview", "i3", "pavucontrol", "tmux"]
   tags:
     - install
     - core

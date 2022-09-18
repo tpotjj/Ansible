@@ -1,0 +1,24 @@
+- name: Add GPG key for Docker repo 
+  become: true
+  shell: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  tags:
+    - docker
+    - install
+- name: Add Docker repot to APT
+  become: true
+  shell: sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+  tags:
+    - docker
+    - install
+- name: install from Docker repo
+  become: true
+  shell: apt-cache policy docker-ce
+  tags:
+    - docker
+    - install
+- name: Install Docker
+  become: true
+  shell: yes | sudo apt install docker-ce
+  tags:
+    - docker
+    - install

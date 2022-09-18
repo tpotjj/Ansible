@@ -32,3 +32,7 @@
     - include: tasks/redis.yml
     - include: tasks/programs.yml
     - include: tasks/brave.yml
+    - include: tasks/docker.yml
+    - include: tasks/kubernetes.yml
+    - include: tasks/terraform.yml
+    - include: tasks/dart-flutter.yml

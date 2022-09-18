@@ -11,6 +11,7 @@
     name: dart 
   tags:
     - install
+    - dart
 # Flutter
 - name: Install Postman
   become: true

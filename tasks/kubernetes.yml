@@ -1,0 +1,7 @@
+- name: Install Kubernetes
+  become: true
+  snap:
+    name: kubectl
+  tags:
+    - kubernetes
+    - install
