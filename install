@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
 
-## Install ansible
+## Copy and Paste the following command in your terminal:
+## bash <(curl -s https://raw.githubusercontent.com/tpotjj/Ansible/test_full_install/install)
+
+## Install Git
+sudo apt update
+sudo apt install git
+
+## Install Ansible
 sudo apt install software-properties-common
 sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible
+
+## Run Ansible-Playbook
+sudo ansible-pull -U https://github.com/<USERNAME>/<REPOSITORY>.git -t install --ask-become-pass
