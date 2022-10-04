@@ -16,6 +16,15 @@
     - install
     - programs
     - discord
+# Kdenlive
+- name: Install Discord
+  become: true
+  snap:
+    name: kdenlive
+  tags:
+    - install
+    - programs
+    - kdenlive
 # OBS
 - name: Uninstall OBS
   become: true
