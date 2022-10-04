@@ -17,7 +17,7 @@
     - programs
     - discord
 # Kdenlive
-- name: Install Discord
+- name: Install Kdenlive
   become: true
   snap:
     name: kdenlive
