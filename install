@@ -13,4 +13,4 @@ sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible
 
 ## Run Ansible-Playbook
-sudo ansible-pull -U https://github.com/<USERNAME>/<REPOSITORY>.git -t install --ask-become-pass
+sudo ansible-pull -U https://github.com/tpotjj/Ansible.git -t install --ask-become-pass
