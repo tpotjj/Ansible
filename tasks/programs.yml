@@ -25,6 +25,15 @@
     - install
     - programs
     - kdenlive
+# Gimp
+- name: Install Gimp
+  become: true
+  snap:
+    name: Gimp
+  tags:
+    - install
+    - programs
+    - gimp
 # OBS
 - name: Uninstall OBS
   become: true
