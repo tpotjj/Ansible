@@ -6,10 +6,10 @@
     - install
     - core
     - redis
-- name: Install Sys Packages 2.0 (gnupg2, software-properties-common)
+- name: Install Sys Packages 2.0 (gnupg2, software-properties-common, protobuf-compiler)
   become: true
   apt:
-    name: ["gnupg2", "software-properties-common"]
+    name: ["gnupg2", "software-properties-common", "protobuf-compiler"]
   tags:
     - install
     - core
